@@ -99,7 +99,7 @@ export class TaskService {
         const task = this.getTask(id);
         const project = this.projects.get(task.projectId);
         if (project) {
-            project.tasks = project.tasks.filter(tid => tid !== id);
+            project.tasks = project.tasks.filter(tid => tid !== id)
         }
         this.tasks.delete(id);
     }

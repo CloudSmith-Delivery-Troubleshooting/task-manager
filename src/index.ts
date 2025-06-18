@@ -9,9 +9,10 @@ try {
     // Create tasks
     const task1 = service.createTask(project.id, 'Create wireframes', 'Design wireframes for homepage', 'ToDo', 'High');
     const task2 = service.createTask(project.id, 'Develop frontend', 'Implement UI components', 'ToDo', 'Medium');
+    const task3 = service.createTask(project.id, 'Develop backend', 'Implement UI components', 'ToDo', 'Medium');
 
     console.log('Project:', project);
-    console.log('Tasks:', service.listTasks(project.id));
+    console.log("Tasks:", service.listTasks(project.id));
 
     // Update a task
     service.updateTask(task1.id, { status: 'InProgress' });
