@@ -3,9 +3,9 @@ name: CI
 on:
   workflow_dispatch:
   push:
-    branches: [ci-lint]
+    branches: [ci-lint, ci-test]
   pull_request:
-    branches: [ci-lint]
+    branches: [ci-lint, ci-test]
 
 jobs:
   lint:
