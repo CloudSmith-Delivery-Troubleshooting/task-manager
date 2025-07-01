@@ -1,6 +1,6 @@
-import { Project } from '../models/project';
-import { Task, TaskPriority, TaskStatus } from '../models/task';
-import { v4 as uuidv4 } from 'uuid';
+import {Project} from '../models/project';
+import {Task, TaskPriority, TaskStatus} from '../models/task';
+import {v4 as uuidv4} from 'uuid';
 
 export class TaskService {
     private projects: Map<string, Project> = new Map();
@@ -12,9 +12,7 @@ export class TaskService {
             throw new Error('Project name is required');
         }
         const id = uuidv4();
-        const project: Project = { id, name, description, tasks: [] };
-        this.projects.set(id, project);
-        return project;
+        return {id, name, description, tasks: []};
     }
 
     getProject(id: string): Project {
